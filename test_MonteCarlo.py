@@ -264,7 +264,6 @@ class TestAnalyzer(unittest.TestCase):
         expected_df.index.name = 'Roll Number'
         expected_df.columns = [1, 2, 3, 4, 5, 6]
 
-        # Use pd.testing.assert_frame_equal to assert DataFrame equality
         pd.testing.assert_frame_equal(face_counts_df, expected_df)
         
         

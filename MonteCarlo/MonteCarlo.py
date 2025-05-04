@@ -282,9 +282,9 @@ class Analyzer:
                 counts[face] = counts.get(face, 0) + 1
             face_counts.append(counts)
 
-        face_counts_df = pd.DataFrame(face_counts).fillna(0).astype(int)  # Ensure integers
-        face_counts_df = face_counts_df.reindex(columns=sorted([1, 2, 3, 4, 5, 6]), fill_value=0)  # Sort columns
-        face_counts_df.index = range(1, len(face_counts_df) + 1)  # Start index at 1
+        face_counts_df = pd.DataFrame(face_counts).fillna(0).astype(int)
+        face_counts_df = face_counts_df.reindex(columns=sorted([1, 2, 3, 4, 5, 6]), fill_value=0)
+        face_counts_df.index = range(1, len(face_counts_df) + 1)
         face_counts_df.index.name = 'Roll Number'
 
         return face_counts_df
